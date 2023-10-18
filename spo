@@ -1,0 +1,15 @@
+user@ub-server:~/krutov$ echo 'They ate 5 apples and 5 mangoes' | sed 's/5/five/g'
+They ate five apples and five mangoes
+
+user@ub-server:~/krutov$ sed -i 's/0xA0/0x50/g; s/0xFF/0x7F/g' hex.txt | cat hex.txt
+start address: 0x50, func1 address: 0x50
+end address: 0x7F, func2 address: 0xB0
+
+user@ub-server:~/krutov$ echo 'goal new user sit eat dinner' | sed 'y/aeiou/AEIOU/'
+gOAl nEw UsEr sIt EAt dInnEr
+
+user@ub-server:~/krutov$ echo 'a sunny day' | sed 's/sunny/cloudy/'
+a cloudy day
+
+user@ub-server:~/krutov$ echo 'a sunny day' | sed 'y/sunny/cloudy/'
+sed: -e expression #1, char 15: strings for `y' command are different lengths
